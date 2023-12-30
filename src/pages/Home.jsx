@@ -1,6 +1,9 @@
 import {Box,Typography} from '@mui/material';
 import Typed from "typed.js";
-import { useEffect,useRef } from 'react';
+import { useEffect,useRef,useCallback } from 'react';
+import Particles from "react-particles";
+import { loadSlim } from "tsparticles-slim";
+import {links} from '../constant/particles'
 const Home=()=>{
     const nameEl=useRef(null);
     const infoEl=useRef(null);
@@ -31,12 +34,24 @@ const Home=()=>{
             typedName.destroy();
             typedInfo.destroy();
         }
-    },[])
+    },[]);
+    const particlesInit = useCallback(async engine => {
+        console.log(engine);
+        
+        await loadSlim(engine);
+    }, []);
+
+    const particlesLoaded = useCallback(async container => {
+        await console.log(container);
+    }, []);
+
     return(
     <Box sx={{backgroundImage:`url(${require("../assets/images/wallhaven-d6pld3.jpeg")})`,height:'100vh',backgroundSize:'cover',backgroundRepeat:'no-repeat',backgroundPosition:'center',
     display:'flex',justifyContent:'center',alignItems:'center',flexDirection:'column'}}>
         <Typography ref={nameEl}></Typography>
         <Typography ref={infoEl}></Typography>
+        {/* <Particles id="tsparticles" options={links} init={particlesInit} loaded={particlesLoaded} /> */}
+
       </Box>  
     )
 }

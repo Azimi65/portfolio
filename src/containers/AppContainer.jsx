@@ -9,6 +9,7 @@ import SidebarContainer from './SidebarContainer';
 import MainContext from '../context';
 import DrawerActionButton from '../components/sidebar/DrawerActionButton';
 import Home from '../pages/Home';
+import About from '../pages/About'
 function AppContainer() {
   const [pageNumber,setPageNumber]=useState(0)
   const handlePageNumber = (event, newValue) => {
@@ -29,9 +30,7 @@ function AppContainer() {
               <Home/>
             </Page>
             <Page pageNumber={pageNumber} index={1}>
-            <Box sx={{backgroundImage:`url(${require("../assets/images/wallhaven-6oqqqq.png")})`,height:'100vh',backgroundSize:'cover',backgroundRepeat:'no-repeat',backgroundPosition:'center'}}>
-              <Typography>درباره من</Typography>
-            </Box>
+            <About/>
             </Page>
             <Page pageNumber={pageNumber} index={2}>
               <Box sx={{backgroundImage:`url(${require("../assets/images/wallhaven-j3328w.jpg")})`,height:'100vh',backgroundSize:'cover',backgroundRepeat:'no-repeat',backgroundPosition:'center'}}>
