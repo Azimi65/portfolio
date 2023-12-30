@@ -8,6 +8,7 @@ import { Typography,Box } from '@mui/material';
 import SidebarContainer from './SidebarContainer';
 import MainContext from '../context';
 import DrawerActionButton from '../components/sidebar/DrawerActionButton';
+import Home from '../pages/Home';
 function AppContainer() {
   const [pageNumber,setPageNumber]=useState(0)
   const handlePageNumber = (event, newValue) => {
@@ -25,9 +26,7 @@ function AppContainer() {
           <DrawerActionButton/>
           <PageContainer>
             <Page pageNumber={pageNumber} index={0}>
-              <Box sx={{backgroundImage:`url(${require("../assets/images/wallhaven-d6pld3.jpeg")})`,height:'100vh',backgroundSize:'cover',backgroundRepeat:'no-repeat',backgroundPosition:'center'}}>
-                <Typography>صفحه اصلی</Typography>
-              </Box>
+              <Home/>
             </Page>
             <Page pageNumber={pageNumber} index={1}>
             <Box sx={{backgroundImage:`url(${require("../assets/images/wallhaven-6oqqqq.png")})`,height:'100vh',backgroundSize:'cover',backgroundRepeat:'no-repeat',backgroundPosition:'center'}}>
