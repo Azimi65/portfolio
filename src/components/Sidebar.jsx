@@ -8,7 +8,7 @@ const Sidebar = ({value,handleChange})=>{
    const[drawerOPen,setDrawerOpen]=useState(false) 
     return(
         
-            <Grid xs={0} sm={0} md={3} lg={2} xl={2} sx={{backgroundColor:grey[900],display:'flex',gap:1,alignItems:'center',flexDirection:'column',paddingBottom:3}}>
+            <Grid xs={0} sm={0} md={3} lg={2} xl={2} sx={{backgroundColor:grey[900],display:'flex',gap:1,alignItems:'center',flexDirection:'column',paddingBottom:3,height:'100vh'}}>
                 {/* <Hidden mdUp> */}
                     <Fab sx={{backgroundColor:red[500],marginLeft:10,mt:2,display:{
                         xs:'block',

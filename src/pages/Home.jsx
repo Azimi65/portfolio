@@ -15,7 +15,7 @@ const Home=()=>{
     ];
     useEffect(()=>{
         const typedName = new Typed(nameEl.current,{
-            strings:["اکرم میرعظیمی"],
+            strings:["اکرم عظیمی"],
             typeSpeed:50,
             backSpeed:20,
             backDelay:10,
