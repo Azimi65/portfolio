@@ -8,8 +8,7 @@ import { prefixer } from 'stylis';
 import {useScrollTrigger} from '@mui/material';
 import {cloneElement} from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
-import  Sidebar  from '../Sidebar';
-import ContentContainer from '../ContentContainer';
+
 function ElevationScroll(props: Props) {
     const { children} = props;
   
@@ -33,13 +32,13 @@ const MainLayout = ({children})=>{
             <CacheProvider value={cacheRtl}>
             <ThemeProvider theme={theme}>
               <HelmetProvider>
-                  <Helmet>
-                    <title>وب سایت شخصی اکرم میرعظیمی</title>
-                  </Helmet>
-              </HelmetProvider>
-              <Grid container sx={{height:"100vh"}}>
-                  {children}
-              </Grid>
+              <Helmet>
+                <title>وب سایت اکرم عظیمی | صفحه اصلی</title>
+              </Helmet>
+                  <Grid container sx={{height:"100vh"}}>
+                    {children}
+                  </Grid> 
+              </HelmetProvider> 
             </ThemeProvider>
         </CacheProvider>
         </>

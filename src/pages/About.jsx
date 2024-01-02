@@ -4,7 +4,9 @@ import Grid from '@mui/material/Unstable_Grid2';
 import {CodeRounded,KeyboardArrowLeftRounded,SelfImprovementRounded} from '@mui/icons-material';
 import Skill from './components/Skill';
 import { useState,useEffect } from 'react';
-
+import { devInfo } from '../constant/devInfo';
+import CountUp from 'react-countup';
+import Tooltip from '@mui/material/Tooltip';
 const About =() =>{
     const{htmlSkill,cssSkill,jsSkill,reactSkill,gitSkill}=devSkills;
     const[html,setHtml]=useState(0);
@@ -41,28 +43,53 @@ const About =() =>{
     },[])
     return(
         <Box sx={{height:'100vh',backgroundSize:'cover',backgroundRepeat:'no-repeat',backgroundPosition:'center',overflowY:'scroll'}}>
+            
            <Grid container>
-                <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{mx:5}}>
+                <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{mx:5,mt:2}}>
                     <Divider sx={{"&::before , &::after":{borderColor:'primary.main'}}}>
-                        <Chip   icon={<CodeRounded/>} label={<Typography variant='caption'>من یک برنامه نویس و توسعه دهنده فرانت اند هستم</Typography>} color='primary' sx={{px:3,py:3,textWrap:'wrap',textAlign:'left',color:'black'}}/>
+                        <Chip   icon={<CodeRounded/>} label={<Typography variant='caption'>من یک برنامه نویس و توسعه دهنده فرانت اند هستم</Typography>} color='warning' sx={{px:3,py:3,textWrap:'wrap',textAlign:'left',color:'black'}}/>
                     </Divider>
                 </Grid>
            </Grid>
-           <Grid container sx={{display:'flex',justifyContent:'left',gap:5}}>
+           <Grid container sx={{display:'flex',justifyContent:'center',gap:5}}>
                 <Grid item   sx={{mx:5,mt:3,display:'flex',justifyContent:'center'}}>
                     <Avatar src="./images/avatar.jpg" alt="profile image" variant="rounded" sx={{ width: 250, height: 250 }}>AM</Avatar>
                 </Grid>
+                
                 <Grid  item  sx={{mx:5,mt:8,textAlign:'left',verticalAlign:'center'}}>
-                    <Typography variant='caption' sx={{display:'flex',alignItems:'center'}}><KeyboardArrowLeftRounded color='primary'/>نام و نام خانوادگی: اکرم عظیمی</Typography>
-                    <Typography variant='caption' sx={{display:'flex',alignItems:'center'}}><KeyboardArrowLeftRounded color='primary'/>سن:37</Typography>
-                    <Typography variant='caption' sx={{display:'flex',alignItems:'center'}}><KeyboardArrowLeftRounded color='primary'/>شهر: اراک</Typography>
-                    <Typography variant='caption' sx={{display:'flex',alignItems:'center'}}><KeyboardArrowLeftRounded color='primary'/>آدرس ایمیل: RoseCode@gmail.com</Typography>
+                        <Typography variant='caption' sx={{display:'flex',alignItems:'center'}}><KeyboardArrowLeftRounded color='primary'/>نام و نام خانوادگی: اکرم عظیمی</Typography>
+                        <Typography variant='caption' sx={{display:'flex',alignItems:'center'}}><KeyboardArrowLeftRounded color='primary'/>سن:37</Typography>
+                        <Typography variant='caption' sx={{display:'flex',alignItems:'center'}}><KeyboardArrowLeftRounded color='primary'/>شهر: اراک</Typography>
+                        <Typography variant='caption' sx={{display:'flex',alignItems:'center'}}><KeyboardArrowLeftRounded color='primary'/>آدرس ایمیل: RoseCode@gmail.com</Typography>
                 </Grid>
+                <Grid item sx={{mx:5,mt:8,textAlign:'right',verticalAlign:'center',display:{
+                    xs:'none',
+                    sm:'none',
+                    md:'none',
+                    lg:'block'
+                }}}>
+                    <Box component='div'>
+                        {devInfo.map((item,index)=>(
+                            
+                            <Box key={index} sx={{display:'flex',justifyContent:'center'}} >
+                                <Tooltip placement='left' title={item.title} arrow> 
+                                    <Chip  variant='contained'  label={<Typography>
+                                        <CountUp start={0} end={item.total} duration={2}/>
+                                    
+                                    </Typography>} color={item.color} icon={item.icon}  sx={{width: "max-content",p:3,m:2,width:1}}/>
+                                </Tooltip>
+                            </Box>
+                           
+                            
+                        ))}
+                                               
+                    </Box>
+                </Grid>         
            </Grid>
            <Grid container>
                 <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{mx:5,mt:2}}>
                     <Divider sx={{"&::before , &::after":{borderColor:'secondary.main'}}}>
-                        <Chip  icon={<SelfImprovementRounded/>}  label={<Typography variant='caption'>مهارت های من</Typography>} color='secondary' sx={{px:3,py:3,textWrap:'wrap',textAlign:'left'}}/>
+                        <Chip  icon={<SelfImprovementRounded/>}  label={<Typography variant='caption'>مهارت های من</Typography>} color='info' sx={{px:3,py:3,textWrap:'wrap',textAlign:'left'}}/>
                     </Divider>
                     <Skill icon={htmlSkill.icon} value={html} name={htmlSkill.name} color={htmlSkill.color}/>
                     <Skill icon={cssSkill.icon} value={css} name={cssSkill.name} color={cssSkill.color}/>

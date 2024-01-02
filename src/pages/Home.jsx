@@ -1,6 +1,7 @@
 import {Box,Typography} from '@mui/material';
 import Typed from "typed.js";
 import { useEffect,useRef,useCallback } from 'react';
+import { Helmet } from 'react-helmet-async';
 import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
 import {links} from '../constant/particles'
@@ -46,13 +47,15 @@ const Home=()=>{
     }, []);
 
     return(
-    <Box sx={{backgroundImage:`url(${require("../assets/images/wallhaven-d6pld3.jpeg")})`,height:'100vh',backgroundSize:'cover',backgroundRepeat:'no-repeat',backgroundPosition:'center',
+        
+    <Box sx={{backgroundImage:`url(${require("../assets/images/wallhaven-j3328w.jpg")})`,height:'100vh',backgroundSize:'cover',backgroundRepeat:'no-repeat',backgroundPosition:'center',
     display:'flex',justifyContent:'center',alignItems:'center',flexDirection:'column'}}>
+        
+            
         <Typography ref={nameEl}></Typography>
         <Typography ref={infoEl}></Typography>
         {/* <Particles id="tsparticles" options={links} init={particlesInit} loaded={particlesLoaded} /> */}
-
-      </Box>  
+    </Box>  
     )
 }
 export default Home;

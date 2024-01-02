@@ -1,15 +1,18 @@
 import { createTheme } from "@mui/material";
-import {blue ,red} from '@mui/material/colors'
+import {blue ,lime,tomato} from '@mui/material/colors'
 const theme = createTheme({
     direction: 'rtl',
     palette:{
       mode:"dark",
-        primary:{
-            main:"#00a152"
-        },
-        grey:{
-          
+      primary: {
+        main: "#494c7d"
+      },
+        tertiary: {
+          main: '#FFE461',
+          dark: '#FED047',
+          light: "#FFEC92"
         }
+
     },
     typography:{
       fontFamily:"Vazir,Roboto",
