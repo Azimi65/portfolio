@@ -2,13 +2,12 @@ import { CacheProvider } from '@emotion/react';
 import { ThemeProvider } from '@mui/material/styles';
 import { HelmetProvider,Helmet } from 'react-helmet-async';
 import createCache from '@emotion/cache';
-import theme from './theme';
 import rtlPlugin from 'stylis-plugin-rtl';
 import { prefixer } from 'stylis';
 import {useScrollTrigger} from '@mui/material';
 import {cloneElement} from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
-
+import {lightTheme,darkTheme} from './theme'
 function ElevationScroll(props: Props) {
     const { children} = props;
   
@@ -26,7 +25,9 @@ const cacheRtl = createCache({
     key: 'muirtl',
     stylisPlugins: [prefixer, rtlPlugin],
   });
-const MainLayout = ({children})=>{
+  
+const MainLayout = ({children,mode})=>{
+  const theme= mode==='dark'?darkTheme:lightTheme;
     return(
         <>
             <CacheProvider value={cacheRtl}>

@@ -1,10 +1,12 @@
 import {Box,Avatar,Typography,Hidden, IconButton} from '@mui/material';
 import {WhatsApp} from '@mui/icons-material';
 import {GitHub,Telegram,Instagram} from '@mui/icons-material';
+import ThemeActionButton from './ThemeActionButton'
 const SidebarHeader=()=>{
     return(
         <>
         <Box sx={{display:'flex',flexDirection:'column',alignItems:'center',textAlign:'center',pt:2}}> 
+        <ThemeActionButton/>
                 <Hidden mdDown>
                     <Avatar src="./images/avatar.jpg" alt="profile image" variant="rounded" sx={{ width: 160, height: 160 }}>AM</Avatar>
                 </Hidden>

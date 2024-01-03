@@ -4,4 +4,5 @@ export default createContext({
     'handlePageNumber':()=>{},
     'draweropen':false,
     'setDrawerOpen':()=>{},
+    'HandleThemeChange':()=>{}
 })
