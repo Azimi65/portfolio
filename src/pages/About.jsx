@@ -53,7 +53,7 @@ const About =() =>{
            </Grid>
            <Grid container sx={{display:'flex',justifyContent:'center',gap:5}}>
                 <Grid item   sx={{mx:5,mt:3,display:'flex',justifyContent:'center'}}>
-                    <Avatar src="./images/avatar.jpg" alt="profile image" variant="rounded" sx={{ width: 250, height: 250 }}>AM</Avatar>
+                    <Avatar src="./images/avatar.jpg" alt="profile image" variant="rounded" sx={{ width: 250, height: 250,color:'black' }}>AM</Avatar>
                 </Grid>
                 
                 <Grid  item  sx={{mx:5,mt:8,textAlign:'left',verticalAlign:'center'}}>

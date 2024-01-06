@@ -2,7 +2,6 @@ import{Chip,Divider, Typography,Slide, Card,Button,CardMedia,CardContent,CardAct
 import {useState,useEffect} from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
 import devSamples from '../constant/samples';
-import {stealblue,lime,grey} from '@mui/material/colors';
 import EllipsisText from "react-ellipsis-text";
 const Samples=()=>{
     const [loading,setLoading]=useState(false)

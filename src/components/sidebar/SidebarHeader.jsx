@@ -8,10 +8,10 @@ const SidebarHeader=()=>{
         <Box sx={{display:'flex',flexDirection:'column',alignItems:'center',textAlign:'center',pt:2}}> 
         <ThemeActionButton/>
                 <Hidden mdDown>
-                    <Avatar src="./images/avatar.jpg" alt="profile image" variant="rounded" sx={{ width: 160, height: 160 }}>AM</Avatar>
+                    <Avatar src="./images/avatar.jpg" alt="profile image" variant="rounded" sx={{ width: 160, height: 160 ,color:'black'}}>AM</Avatar>
                 </Hidden>
                     
-                <Typography variant="h6" color="primary" sx={{mt:2}}>اکرم عظیمی</Typography>
+                <Typography variant="h6" color="text.primary" sx={{mt:2}}>اکرم عظیمی</Typography>
                 <Typography variant="caption" color={"gray"}>برنامه نویس فرانت اند</Typography>
         </Box> 
         <Box component="div" sx={{display:'flex',justifyContent:'center'}}>

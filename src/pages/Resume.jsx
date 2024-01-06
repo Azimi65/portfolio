@@ -1,7 +1,7 @@
 import{Chip,Divider, Typography,Slide} from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 import {Timeline,TimelineItem,TimelineSeparator,TimelineConnector,TimelineContent,TimelineDot} from '@mui/lab';
-import { devEdu, devInfo } from '../constant/devInfo';
+import { devEdu } from '../constant/devInfo';
 import {School,BusinessCenterRounded} from '@mui/icons-material';
 import {useState,useEffect} from 'react';
 const Resume=()=>{
@@ -41,7 +41,7 @@ const Resume=()=>{
                                     <Typography variant='caption'>{item.year}</Typography>
                                     <Typography variant='caption'>{item.cert}</Typography>
                                     <Typography variant='caption'>{item.field}</Typography>
-                                    <Typography variant='caption'>{item.uni}</Typography>
+                                    <Typography variant='caption'>{" "}{item.uni}</Typography>
                                 </TimelineContent>
                                 </TimelineItem>
                             </Slide>
@@ -68,7 +68,7 @@ const Resume=()=>{
                                     <Typography variant='caption'>{item.year}</Typography>
                                     <Typography variant='caption'>{item.cert}</Typography>
                                     <Typography variant='caption'>{item.field}</Typography>
-                                    <Typography variant='caption'>{item.uni}</Typography>
+                                    <Typography variant='caption'>{" "}{item.uni}</Typography>
                                 </TimelineContent>
                                 </TimelineItem>
                             </Slide>

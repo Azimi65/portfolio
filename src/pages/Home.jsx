@@ -1,7 +1,6 @@
 import {Box,Typography} from '@mui/material';
 import Typed from "typed.js";
 import { useEffect,useRef,useCallback } from 'react';
-import { Helmet } from 'react-helmet-async';
 import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
 import {links} from '../constant/particles'
