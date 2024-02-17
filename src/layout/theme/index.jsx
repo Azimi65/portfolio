@@ -6,9 +6,6 @@ export const darkTheme = createTheme({
       mode:"dark",
         primary:{
             main:"#8be9fd"
-        },
-        grey:{
-          
         }
     },
     typography:{
@@ -31,9 +28,6 @@ export const darkTheme = createTheme({
         primary:{
             main:"#f44336"
             
-        },
-        grey:{
-          
         }
     },
     typography:{

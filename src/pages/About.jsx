@@ -3,6 +3,7 @@ import {Box,Divider,Chip, Avatar, Typography, Icon} from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 import {CodeRounded,KeyboardArrowLeftRounded,SelfImprovementRounded} from '@mui/icons-material';
 import Skill from './components/Skill';
+import { deepPurple } from '@mui/material/colors';
 import { useState,useEffect } from 'react';
 import { devInfo } from '../constant/devInfo';
 import CountUp from 'react-countup';
@@ -47,7 +48,7 @@ const About =() =>{
            <Grid container>
                 <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{mx:5,mt:2}}>
                     <Divider sx={{"&::before , &::after":{borderColor:'primary.main'}}}>
-                        <Chip   icon={<CodeRounded/>} label={<Typography variant='caption'>من یک برنامه نویس و توسعه دهنده فرانت اند هستم</Typography>} color='warning' sx={{px:3,py:3,textWrap:'wrap',textAlign:'left',color:'black'}}/>
+                        <Chip   icon={<CodeRounded/>} label={<Typography variant='caption'>من یک برنامه نویس و توسعه دهنده فرانت اند هستم</Typography>}  sx={{px:3,py:3,textWrap:'wrap',textAlign:'left',color:'black',backgroundColor:deepPurple[50]}}/>
                     </Divider>
                 </Grid>
            </Grid>
